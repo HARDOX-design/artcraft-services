@@ -1,7 +1,5 @@
 import { getFlatpakOciIndex } from "@/lib/flatpak-oci";
 
-export const dynamic = "force-static";
-
 export function GET(request: Request) {
   const url = new URL(request.url);
   const catalog = getFlatpakOciIndex(url.searchParams);
